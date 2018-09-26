@@ -16,13 +16,11 @@ install:
   - npm install
   - npm i ionic cordova -g
 before_build:
-  - ps: >-
-    cd blinker-simple-app
-    npm i
+  - ps: cd blinker-simple-app
+  - ps: npm i
 
 build_script:
-  - ps: >-
-    ionic cordova build android
+  - ps: ionic cordova build android
     
 cache:
   - '%APPDATA%\npm-cache'
