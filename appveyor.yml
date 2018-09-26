@@ -14,8 +14,6 @@ init:
   - appveyor DownloadFile "https://dl.google.com/android/repository/tools_r25.2.3-windows.zip"
   - 7z x "tools_r25.2.3-windows.zip" > nul
   - npm i ionic cordova -g
-  - cd "C:\projects\blinker-simple-app"
-  - npm i
 
 install:
   - choco install gradle -version 3.4.1
@@ -33,6 +31,10 @@ install:
   - set path=C:\ProgramData\chocolatey\lib\gradle\tools\gradle-3.4.1\bin;%path%
 
 build: off
+
+before_build:
+  - cd "C:\projects\blinker-simple-app"
+  - npm i
 
 build_script:
  - ionic cordova build android
