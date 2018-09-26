@@ -32,7 +32,9 @@ install:
   # below is a workaround on using gradle installed via choco on appveyor
   - set path=C:\ProgramData\chocolatey\lib\gradle\tools\gradle-3.4.1\bin;%path%
 
-build:
+build: off
+
+build_script:
  - ionic cordova build android
 
 test_script:
