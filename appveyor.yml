@@ -33,6 +33,8 @@ before_build:
   - npm i npm@latest -g
   - npm i ionic cordova -g
   - cd "C:\projects\blinker-simple-app"
+  - npm i rxjs -g
+  - npm i -D -E @angular/cli
   - npm i
 
 build_script:
