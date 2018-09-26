@@ -3,6 +3,13 @@ image:
 
 environment:
   ANDROID_HOME: "C:\\android"
+
+  # If the gradle daemon is used, the build hangs after generating the wrapper
+  GRADLE_OPTS: -Dorg.gradle.daemon=false
+
+  # URL for SDK Tools, Revision 26.1.1 (September 2017)
+  SDK_TOOLS_URL: https://dl.google.com/android/repository/sdk-tools-windows-3859397.zip
+
   matrix:
   - nodejs_version: "8"
 
