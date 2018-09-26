@@ -32,10 +32,9 @@ build: off
 before_build:
   - npm i npm@latest -g
   - npm i ionic cordova -g
+  - npm i  npm-install-peers -g
   - cd "C:\projects\blinker-simple-app"
-  - npm i rxjs -g
-  - npm i -D -E @angular/cli
-  - npm i
+  - npm-install-peers
 
 build_script:
  - ionic cordova build android
